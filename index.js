@@ -18,7 +18,7 @@ app.post('/api', async function (req, res) {
     const data_to_pass_in = req.body.message;
     console.log(data_to_pass_in);
     const configuration = new Configuration({
-        apiKey: "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",
+        apiKey: process.env.OPENAI_API_KEY,
       });
     const openai = new OpenAIApi(configuration);
 
